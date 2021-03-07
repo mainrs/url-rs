@@ -1,0 +1,9 @@
+[package]
+name = "humanize-url"
+description = "A library for displaying URLs in a human-friendly way"
+version = "0.0.0"
+license = "Apache-2.0 OR MIT"
+authors = ["SirWindfield <SirWindfield@users.noreply.github.com>"]
+edition = "2018"
+
+[dependencies]

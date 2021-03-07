@@ -1,0 +1,2 @@
+[workspace]
+members = ["crates/humanize-url", "crates/truncate-url", "crates/unrestrictive-url"]
