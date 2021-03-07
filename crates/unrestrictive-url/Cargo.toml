@@ -7,3 +7,6 @@ authors = ["SirWindfield <SirWindfield@users.noreply.github.com>"]
 edition = "2018"
 
 [dependencies]
+
+[package.metadata.workspaces]
+independent = true
