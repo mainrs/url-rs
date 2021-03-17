@@ -112,7 +112,14 @@ impl fmt::Display for UnrestrictiveUrl<'_> {
                     }
 
                     for segment in path_segments {
-                        write!(f, "/{}", segment)?;
+                        // Rust's `split` functions returns empty strings in cases where two
+                        // separators are next to each other. For a path `/other` splitted at `/`
+                        // this means that we get two values back, `["", "other"]`. This would get
+                        // serialized into `//other`. By ignoring empty strings we correctly
+                        // serialize the URL again.
+                        if !segment.is_empty() {
+                            write!(f, "/{}", segment)?;
+                        }
                     }
                 }
             }
