@@ -10,10 +10,10 @@ This crate is a lightweight wrapper around the `url` crate. It uses `url` to par
 
 ```rust
 use unrestrictive_url::{Url, UnrestrictiveUrl};
-///
+
 let url = Url::parse("https://github.com").unwrap();
 let mut url = UnrestrictiveUrl::from(&url);
 url.scheme = Some("jojo");
-///
+
 assert_eq!("jojo://github.com/", url.to_string());
 ```
