@@ -7,6 +7,7 @@ authors = ["SirWindfield <SirWindfield@users.noreply.github.com>"]
 edition = "2018"
 
 [dependencies]
+unrestrictive-url = { version = "0.0.0", path = "../unrestrictive-url" }
 
 [package.metadata.workspaces]
 independent = true
