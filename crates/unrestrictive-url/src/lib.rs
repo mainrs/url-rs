@@ -156,7 +156,7 @@ impl<'a> From<&'a url::Url> for UnrestrictiveUrl<'a> {
 
 #[cfg(test)]
 mod tests {
-    use super::{url::Url, UnrestrictiveUrl};
+    use super::{UnrestrictiveUrl, Url};
 
     #[test]
     fn test_arbitrary_scheme() {
